@@ -3,24 +3,24 @@ package Entities;
 import java.util.Date;
 
 public class HourContract {
-    private Date hour;
+    private Date date;
     private Double valuePerHour;
     private Integer hours;
 
     public HourContract(){}
 
     public HourContract(Date hour, Double valuePerHour, Integer hours){
-        this.hour = hour;
+        this.date = hour;
         this.hours = hours;
         this.valuePerHour = valuePerHour;
     }
 
-    public Date getHour() {
-        return hour;
+    public Date getDate() {
+        return date;
     }
 
-    public void setHour(Date hour) {
-        this.hour = hour;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Double getValuePerHour() {
@@ -37,5 +37,9 @@ public class HourContract {
 
     public void setHours(Integer hours) {
         this.hours = hours;
+    }
+
+    public double totalValue(){
+        return valuePerHour * hours;
     }
 }
